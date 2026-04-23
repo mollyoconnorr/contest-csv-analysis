@@ -195,6 +195,7 @@ def write_report(
     )
 
     fieldnames = [
+        "section",
         "record_type",
         "sort_order",
         "item",
@@ -217,6 +218,7 @@ def write_report(
 
         writer.writerow(
             {
+                "section": "Summary",
                 "record_type": "summary",
                 "sort_order": 1,
                 "item": "Average teams per institution",
@@ -226,6 +228,7 @@ def write_report(
         # Put the summary rows at the top so they are easy to spot.
         writer.writerow(
             {
+                "section": "Summary",
                 "record_type": "summary",
                 "sort_order": 2,
                 "item": "Rows read",
@@ -234,6 +237,7 @@ def write_report(
         )
         writer.writerow(
             {
+                "section": "Summary",
                 "record_type": "summary",
                 "sort_order": 3,
                 "item": "Rows accepted",
@@ -242,6 +246,7 @@ def write_report(
         )
         writer.writerow(
             {
+                "section": "Summary",
                 "record_type": "summary",
                 "sort_order": 4,
                 "item": "Rows ignored",
@@ -250,6 +255,7 @@ def write_report(
         )
         writer.writerow(
             {
+                "section": "Summary",
                 "record_type": "summary",
                 "sort_order": 5,
                 "item": "Unique institutions",
@@ -258,6 +264,7 @@ def write_report(
         )
         writer.writerow(
             {
+                "section": "Summary",
                 "record_type": "summary",
                 "sort_order": 6,
                 "item": "Total teams counted",
@@ -266,6 +273,7 @@ def write_report(
         )
         writer.writerow(
             {
+                "section": "Summary",
                 "record_type": "summary",
                 "sort_order": 7,
                 "item": "Warnings generated",
@@ -274,6 +282,7 @@ def write_report(
         )
         writer.writerow(
             {
+                "section": "Summary",
                 "record_type": "summary",
                 "sort_order": 8,
                 "item": "Rows missing ranking",
@@ -282,6 +291,7 @@ def write_report(
         )
         writer.writerow(
             {
+                "section": "Summary",
                 "record_type": "summary",
                 "sort_order": 9,
                 "item": "Rows with unrecognized ranking",
@@ -290,6 +300,7 @@ def write_report(
         )
         writer.writerow(
             {
+                "section": "Summary",
                 "record_type": "summary",
                 "sort_order": 10,
                 "item": "Rows missing institution",
@@ -304,6 +315,7 @@ def write_report(
             # This row is for one merged institution, not one original CSV row.
             writer.writerow(
                 {
+                    "section": "Institution Counts",
                     "record_type": "institution",
                     "sort_order": index,
                     "item": institution.display_name,
@@ -319,6 +331,7 @@ def write_report(
         for index, institution in enumerate(outstanding_institutions, start=1):
             writer.writerow(
                 {
+                    "section": "Outstanding Institutions",
                     "record_type": "outstanding_institution",
                     "sort_order": index,
                     "item": institution.display_name,
@@ -333,6 +346,7 @@ def write_report(
         for index, row in enumerate(us_meritorious_or_better, start=1):
             writer.writerow(
                 {
+                    "section": "US Teams",
                     "record_type": "us_team",
                     "sort_order": index,
                     "item": row.get("institution", ""),
@@ -350,6 +364,7 @@ def write_report(
         for index, warning in enumerate(warnings, start=1):
             writer.writerow(
                 {
+                    "section": "Warnings",
                     "record_type": "warning",
                     "sort_order": index,
                     "item": warning,
