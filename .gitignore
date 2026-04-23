@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+
+contest_report.csv
+contest_report.txt
+potential_duplicates.csv
+
