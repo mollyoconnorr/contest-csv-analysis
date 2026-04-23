@@ -6,11 +6,13 @@ This folder contains a Python solution for analyzing the 2015 contest results CS
 
 The program reads a CSV file and writes two CSV files:
 
-1. The average number of teams entered per institution
-2. An ordered list of institutions by team count
-3. A list of all institutions whose teams earned an `Outstanding` ranking
-4. A list of all US teams that earned `Meritorious` ranking or better
-5. A `potential_duplicates.csv` file that shows raw institution names and the final institution name they were merged into
+1. One main CSV report with clear sections for:
+   - summary stats
+   - institution counts
+   - outstanding institutions
+   - US teams with `Meritorious` ranking or better
+   - warnings
+2. A `potential_duplicates.csv` file that shows raw institution names and the final institution name they were merged into
 
 It also prints a processing summary to the console and includes the same summary in the output report.
 
@@ -75,6 +77,8 @@ That means entries such as `MIT` and `mit` are treated as one institution, and c
 
 - `contest_report.csv`: Main analysis report
 - `potential_duplicates.csv`: Review file showing original institution names and the merged institution name
+
+The main report now includes a `section` column so each row is grouped more clearly.
 
 ## Code layout
 
