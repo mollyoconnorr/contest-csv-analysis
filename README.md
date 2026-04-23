@@ -40,12 +40,12 @@ The program will ask for:
 Just press Enter to accept the defaults:
 
 - Input: `2015.csv`
-- Output: `contest_report.csv`
+- Output: `output files/contest_report.csv`
 
 You can still use command-line arguments if you prefer:
 
 ```bash
-python3 analyze_contest.py --input 2015.csv --output contest_report.csv
+python3 analyze_contest.py --input 2015.csv --output "output files/contest_report.csv"
 ```
 
 ## Input expectations
@@ -75,8 +75,9 @@ That means entries such as `MIT` and `mit` are treated as one institution, and c
 
 ## Output files
 
-- `contest_report.csv`: Main analysis report
-- `potential_duplicates.csv`: Review file showing original institution names and the merged institution name
+- `output files/contest_report.csv`: Main analysis report
+- `output files/potential_duplicates.csv`: Review file showing original institution names and the merged institution name
+- `output files/`: Folder where the generated CSV files are saved
 
 The main report now includes a `section` column so each row is grouped more clearly.
 

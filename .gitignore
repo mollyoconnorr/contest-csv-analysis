@@ -1,7 +1,8 @@
 __pycache__/
 *.pyc
+.DS_Store
 
 contest_report.csv
 contest_report.txt
 potential_duplicates.csv
-
+output files/

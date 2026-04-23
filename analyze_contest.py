@@ -407,8 +407,8 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "-o",
         "--output",
-        default="contest_report.csv",
-        help="Output report file (default: contest_report.csv)",
+        default="output files/contest_report.csv",
+        help="Output report file (default: output files/contest_report.csv)",
     )
     return parser
 
@@ -435,7 +435,7 @@ def main() -> int:
         print("Contest Analysis")
         print("Press Enter to accept the default path shown in brackets.")
         input_path = prompt_path("Enter the CSV input file", "2015.csv")
-        output_path = prompt_path("Enter the report output file", "contest_report.csv")
+        output_path = prompt_path("Enter the report output file", "output files/contest_report.csv")
 
     if not input_path.exists():
         parser.error(f"Input file not found: {input_path}")
