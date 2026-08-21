@@ -1,4 +1,4 @@
-# Challenge Problem 6
+# Contest Data Analyzer
 
 This folder contains a Python solution for analyzing the 2015 contest results CSV and similar files with the same general layout.
 
